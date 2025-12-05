@@ -1,0 +1,24 @@
+{
+  "name": "phantom-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Computer Control Agent - Your intelligent desktop automation companion",
+  "author": "Phantom AI Team",
+  "license": "MIT",
+  "workspaces": [
+    "desktop",
+    "website",
+    "shared"
+  ],
+  "scripts": {
+    "dev:desktop": "npm run dev -w desktop",
+    "dev:website": "npm run dev -w website",
+    "build:desktop": "npm run build -w desktop",
+    "build:website": "npm run build -w website",
+    "test": "npm run test -w desktop && npm run test -w website",
+    "lint": "npm run lint -w desktop && npm run lint -w website"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
