@@ -12,25 +12,25 @@ type Platform = 'mac' | 'windows' | 'linux' | 'unknown';
 
 const platforms = {
     mac: {
-        name: 'macOS',
+        name: 'macOS (Apple Silicon)',
         icon: Apple,
         requirement: 'macOS 11 (Big Sur) or later',
-        downloadUrl: '/releases/phantom-ai-mac.dmg',
-        size: '~120 MB',
+        downloadUrl: 'https://github.com/Deb32800/PhantomAI/releases/download/v1.0.0/Phantom.AI-1.0.0-arm64.dmg',
+        size: '~100 MB',
     },
     windows: {
         name: 'Windows',
         icon: Monitor,
         requirement: 'Windows 10 or later',
-        downloadUrl: '/releases/phantom-ai-windows.exe',
-        size: '~130 MB',
+        downloadUrl: 'https://github.com/Deb32800/PhantomAI/releases/download/v1.0.0/Phantom.AI.Setup.1.0.0.exe',
+        size: '~86 MB',
     },
     linux: {
         name: 'Linux',
         icon: Terminal,
         requirement: 'Ubuntu 20.04, Fedora 35, or later',
-        downloadUrl: '/releases/phantom-ai-linux.AppImage',
-        size: '~125 MB',
+        downloadUrl: '#',
+        size: 'Coming Soon',
     },
 };
 
@@ -93,8 +93,8 @@ export default function DownloadPage() {
                                 key={platform}
                                 onClick={() => setSelectedPlatform(platform)}
                                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${selectedPlatform === platform
-                                        ? 'bg-primary-500 text-white'
-                                        : 'glass hover:bg-white/10'
+                                    ? 'bg-primary-500 text-white'
+                                    : 'glass hover:bg-white/10'
                                     }`}
                             >
                                 <Icon className="w-5 h-5" />
